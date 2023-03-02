@@ -6,11 +6,8 @@ steps:
     args:
     - -c
     - |
-      BINARY_NAME=helm-wrapper
-      GOPATH = $(shell go env GOPATH)
-      LDFLAGS="-s -w"
-      rm -rf bin/${BINARY_NAME}
-	    CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -ldflags ${LDFLAGS} -o bin/${BINARY_NAME}
+      rm -rf bin/helm-wrapper
+      CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -ldflags "-s -w" -o bin/helm-wrapper
 
 ### [BUILD CONTAINER] ###
   - name: 'gcr.io/cloud-builders/docker'
