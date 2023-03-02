@@ -1,4 +1,13 @@
 steps:
+### [BUILD APP] ###
+  - name: golang:1.19
+    id: build-app
+    entrypoint: /bin/bash
+    args:
+    - -c
+    - |
+      make build-docker
+
 ### [BUILD CONTAINER] ###
   - name: 'gcr.io/cloud-builders/docker'
     id: build-container-image
