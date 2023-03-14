@@ -22,5 +22,5 @@ steps:
     args:
     - -c
     - |
-      docker tag gcr.io/${PROJECT_ID}/helm-api:build gcr.io/${PROJECT_ID}/helm-api:0.0.1-dev && \
-      docker push gcr.io/${PROJECT_ID}/helm-api:0.0.1-dev
+      docker tag gcr.io/${PROJECT_ID}/helm-api:build gcr.io/${PROJECT_ID}/helm-api:0.0.2-dev && \
+      docker push gcr.io/${PROJECT_ID}/helm-api:0.0.2-dev
